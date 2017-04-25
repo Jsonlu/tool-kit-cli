@@ -19,6 +19,14 @@ program
 		require('../command/make')()
 	})
 
+program
+    .command('get')
+    .description('get computer info')
+    .alias('g')
+    .action(() => {
+      require('../command/getInfo')()
+    })
+
 program.parse(process.argv)
 
 if(!program.args.length){
